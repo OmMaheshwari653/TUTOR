@@ -1,0 +1,258 @@
+export const sampleProfile = {
+  id: "1",
+  name: "Alex Johnson",
+  username: "alex.johnson@example.com",
+  about:
+    "Passionate learner on a journey to master multiple subjects with AI-powered tutoring. Currently focusing on STEM subjects and literature.",
+  avatar: "https://www.w3schools.com/howto/img_avatar.png",
+  yourBatches: [
+    {
+      id: "1",
+      title: "Advanced Mathematics",
+      description:
+        "Personalized mathematics course covering calculus, algebra, and advanced concepts tailored to your learning pace.",
+      isCompleted: false,
+      progress: "65%",
+      subject: "Mathematics",
+      level: "Advanced",
+      instructor: "AI Tutor Alpha",
+      currentChapter: "Chapter 8: Integration",
+      nextSession: "Tomorrow, 3:00 PM",
+    },
+    {
+      id: "2",
+      title: "Physics Fundamentals",
+      description:
+        "Interactive physics learning with AI guidance covering mechanics, thermodynamics, and electromagnetism.",
+      isCompleted: false,
+      progress: "40%",
+      subject: "Physics",
+      level: "Intermediate",
+      instructor: "AI Tutor Beta",
+      currentChapter: "Chapter 4: Motion",
+      nextSession: "Today, 5:00 PM",
+    },
+    {
+      id: "3",
+      title: "Organic Chemistry",
+      description:
+        "Deep dive into organic chemistry with AI-powered explanations and personalized practice sessions.",
+      isCompleted: true,
+      progress: "100%",
+      subject: "Chemistry",
+      level: "Advanced",
+      instructor: "AI Tutor Gamma",
+      currentChapter: "Course Completed",
+      nextSession: "Certificate Available",
+    },
+    {
+      id: "4",
+      title: "English Literature",
+      description:
+        "Explore literature with AI guidance focusing on critical analysis and improving writing skills.",
+      isCompleted: false,
+      progress: "25%",
+      subject: "English",
+      level: "Intermediate",
+      instructor: "AI Tutor Delta",
+      currentChapter: "Chapter 2: Poetry Analysis",
+      nextSession: "Friday, 4:00 PM",
+    },
+    {
+      id: "5",
+      title: "Computer Science Basics",
+      description:
+        "Learn programming fundamentals with AI mentor providing personalized coding challenges and guidance.",
+      isCompleted: true,
+      progress: "100%",
+      subject: "Computer Science",
+      level: "Beginner",
+      instructor: "AI Tutor Epsilon",
+      currentChapter: "Course Completed",
+      nextSession: "Certificate Available",
+    },
+    {
+      id: "6",
+      title: "History & Civics",
+      description:
+        "Comprehensive study of Indian history and civics with AI-powered interactive learning experience.",
+      isCompleted: false,
+      progress: "0%",
+      subject: "History",
+      level: "Intermediate",
+      instructor: "AI Tutor Zeta",
+      currentChapter: "Not Started",
+      nextSession: "Starts March 1st",
+    },
+  ],
+};
+
+export const sampleBatches = [
+  {
+    id: "1",
+    name: "Advanced Mathematics",
+    subject: "Mathematics",
+    level: "Advanced",
+    duration: "12 weeks",
+    progress: "65%",
+    rating: 4.8,
+    instructor: "AI Tutor Alpha",
+    description:
+      "Personalized mathematics course covering calculus, algebra, and advanced concepts tailored to your learning pace.",
+    bgGradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+    isCompleted: false,
+    startDate: "2025-01-15",
+    category: "Personal Study",
+    currentChapter: "Chapter 8: Integration",
+    totalChapters: 15,
+    nextSession: "Tomorrow, 3:00 PM",
+  },
+  {
+    id: "2",
+    name: "Physics Fundamentals",
+    subject: "Physics",
+    level: "Intermediate",
+    duration: "10 weeks",
+    progress: "40%",
+    rating: 4.6,
+    instructor: "AI Tutor Beta",
+    description:
+      "Interactive physics learning with AI guidance covering mechanics, thermodynamics, and electromagnetism.",
+    bgGradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
+    isCompleted: false,
+    startDate: "2025-02-01",
+    category: "Personal Study",
+    currentChapter: "Chapter 4: Motion",
+    totalChapters: 12,
+    nextSession: "Today, 5:00 PM",
+  },
+  {
+    id: "3",
+    name: "Organic Chemistry",
+    subject: "Chemistry",
+    level: "Advanced",
+    duration: "14 weeks",
+    progress: "100%",
+    rating: 4.7,
+    instructor: "AI Tutor Gamma",
+    description:
+      "Deep dive into organic chemistry with AI-powered explanations and personalized practice sessions.",
+    bgGradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+    isCompleted: true,
+    startDate: "2025-01-20",
+    category: "Personal Study",
+    currentChapter: "Course Completed",
+    totalChapters: 14,
+    nextSession: "Certificate Available",
+  },
+  {
+    id: "4",
+    name: "English Literature",
+    subject: "English",
+    level: "Intermediate",
+    duration: "8 weeks",
+    progress: "25%",
+    rating: 4.5,
+    instructor: "AI Tutor Delta",
+    description:
+      "Explore literature with AI guidance focusing on critical analysis and improving writing skills.",
+    bgGradient: "linear-gradient(135deg, #fa709a 0%, #fee140 100%)",
+    isCompleted: false,
+    startDate: "2025-02-10",
+    category: "Personal Study",
+    currentChapter: "Chapter 2: Poetry Analysis",
+    totalChapters: 10,
+    nextSession: "Friday, 4:00 PM",
+  },
+  {
+    id: "5",
+    name: "Computer Science Basics",
+    subject: "Computer Science",
+    level: "Beginner",
+    duration: "16 weeks",
+    progress: "100%",
+    rating: 4.9,
+    instructor: "AI Tutor Epsilon",
+    description:
+      "Learn programming fundamentals with AI mentor providing personalized coding challenges and guidance.",
+    bgGradient: "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)",
+    isCompleted: true,
+    startDate: "2025-01-25",
+    category: "Personal Study",
+    currentChapter: "Course Completed",
+    totalChapters: 16,
+    nextSession: "Certificate Available",
+  },
+  {
+    id: "6",
+    name: "History & Civics",
+    subject: "History",
+    level: "Intermediate",
+    duration: "6 weeks",
+    progress: "0%",
+    rating: 4.4,
+    instructor: "AI Tutor Zeta",
+    description:
+      "Comprehensive study of Indian history and civics with AI-powered interactive learning experience.",
+    bgGradient: "linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)",
+    isCompleted: false,
+    startDate: "2025-03-01",
+    category: "Personal Study",
+    currentChapter: "Not Started",
+    totalChapters: 8,
+    nextSession: "Starts March 1st",
+  },
+];
+
+export const promptFormData = {
+  // Batch basics
+  batchName: "",
+  subject: "",
+  chapters: "",
+  durationWeeks: "",
+  teachingLevel: "Easy",
+  boardType: "CBSE",
+  languages: ["English"],
+  isCompetitiveExam: "No",
+  competitiveExamName: "",
+
+  // Personalization
+  learningGoal: "",
+  examDate: "",
+  priorKnowledge: "Beginner",
+  preferredFormat: ["Detailed notes"],
+  preferredLength: "Standard",
+  visualsPreference: "When helpful",
+  diagramTypes: ["Labeled diagram"],
+  assessmentStyle: ["MCQ", "Short answers"],
+
+  // Media settings (TTS + audio)
+  ttsRateWpm: 115,
+  ttsPitch: -2,
+  ttsPauses: "Standard",
+  ttsAccent: "Indian English",
+
+  // Study plan
+  studyDaysPerWeek: 5,
+  minutesPerSession: 25,
+  startDate: "",
+  targetCompletionDate: "",
+
+  // Inputs (syllabus, textbook, notes)
+  syllabusSourceType: "none", // none | text | link
+  syllabusText: "",
+  syllabusUrl: "",
+
+  // Accessibility
+  dyslexiaFriendly: false,
+  highContrast: false,
+  hinglishTransliteration: false,
+  audioCaptions: true,
+
+  // Engagement
+  gamification: true,
+  notifications: ["Reminders"],
+
+  // Misc
+  otherDetails: "",
+};
