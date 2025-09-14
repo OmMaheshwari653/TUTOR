@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { Suspense, useCallback, lazy } from "react";
 import {
   Box,
   Container,
@@ -21,6 +21,7 @@ import {
   darkBlueColor,
   captionColor,
 } from "../components/constants/color";
+const PageLoader = lazy(() => import("../components/layouts/Loaders"));
 
 const Home = () => {
   const navigate = useNavigate();
@@ -122,53 +123,55 @@ const Home = () => {
               gap: 2,
             }}
           >
-            <Button
-              sx={{
-                bgcolor: aliceBlueColor,
-                color: darkBlueColor,
-                fontWeight: "bold",
-                px: 4,
-                py: 2,
-                fontSize: "1.1rem",
-                borderRadius: 3,
-                boxShadow: `0 8px 25px ${aliceBlueColor}40`,
-                "&:hover": {
-                  bgcolor: "#4fd3b8",
-                  boxShadow: `0 12px 35px ${aliceBlueColor}60`,
-                  transform: "translateY(-3px)",
-                },
-                transition: "all 0.3s ease",
-              }}
-              onClick={handleGetStarted}
-            >
-              <PlayIcon sx={{ mr: 1 }} />
-              Get Started for Free
-            </Button>
-            <Button
-              variant="outlined"
-              sx={{
-                borderColor: "white",
-                color: "white",
-                fontWeight: "bold",
-                px: 4,
-                py: 2,
-                fontSize: "1.1rem",
-                borderRadius: 3,
-                borderWidth: 2,
-                "&:hover": {
-                  borderColor: aliceBlueColor,
-                  color: aliceBlueColor,
-                  bgcolor: `${aliceBlueColor}10`,
+            <Suspense fallback={PageLoader}>
+              <Button
+                sx={{
+                  bgcolor: aliceBlueColor,
+                  color: darkBlueColor,
+                  fontWeight: "bold",
+                  px: 4,
+                  py: 2,
+                  fontSize: "1.1rem",
+                  borderRadius: 3,
+                  boxShadow: `0 8px 25px ${aliceBlueColor}40`,
+                  "&:hover": {
+                    bgcolor: "#4fd3b8",
+                    boxShadow: `0 12px 35px ${aliceBlueColor}60`,
+                    transform: "translateY(-3px)",
+                  },
+                  transition: "all 0.3s ease",
+                }}
+                onClick={handleGetStarted}
+              >
+                <PlayIcon sx={{ mr: 1 }} />
+                Get Started for Free
+              </Button>
+              <Button
+                variant="outlined"
+                sx={{
+                  borderColor: "white",
+                  color: "white",
+                  fontWeight: "bold",
+                  px: 4,
+                  py: 2,
+                  fontSize: "1.1rem",
+                  borderRadius: 3,
                   borderWidth: 2,
-                  boxShadow: `0 8px 25px ${aliceBlueColor}30`,
-                  transform: "translateY(-3px)",
-                },
-                transition: "all 0.3s ease",
-              }}
-              onClick={handleDemo}
-            >
-              See a Demo
-            </Button>
+                  "&:hover": {
+                    borderColor: aliceBlueColor,
+                    color: aliceBlueColor,
+                    bgcolor: `${aliceBlueColor}10`,
+                    borderWidth: 2,
+                    boxShadow: `0 8px 25px ${aliceBlueColor}30`,
+                    transform: "translateY(-3px)",
+                  },
+                  transition: "all 0.3s ease",
+                }}
+                onClick={handleDemo}
+              >
+                See a Demo
+              </Button>
+            </Suspense>
           </Box>
         </Container>
       </Box>

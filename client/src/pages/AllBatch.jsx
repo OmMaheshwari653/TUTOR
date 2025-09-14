@@ -166,7 +166,7 @@ const AllBatch = () => {
   // Navigate to batch details
   const handleBatchClick = useCallback(
     (batchId) => {
-      navigate("/in-progress", { state: { batchId } });
+      navigate(`/batch/${batchId}`);
     },
     [navigate]
   );

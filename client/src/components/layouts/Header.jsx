@@ -7,7 +7,7 @@ import {
   Tooltip,
   Typography,
 } from "@mui/material";
-import React, { useState } from "react";
+import React, { Suspense, useState, lazy } from "react";
 import {
   aliceBlueColor,
   brownColor,
@@ -24,6 +24,8 @@ import {
 
 import { useNavigate, Link } from "react-router-dom";
 import NewBatch from "../specific/NewBatch";
+
+const PageLoader = lazy(() => import("./Loaders"));
 
 const IconBtn = ({ title, onclick, icon }) => {
   return (
@@ -60,7 +62,7 @@ const Header = () => {
   };
 
   return (
-    <>
+    <Suspense fallback={<PageLoader />}>
       <AppBar
         position="static"
         sx={{
@@ -104,7 +106,7 @@ const Header = () => {
       </AppBar>
 
       <NewBatch open={newBatch} onClose={handleCloseNewBatch} />
-    </>
+    </Suspense>
   );
 };
 

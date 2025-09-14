@@ -6,3 +6,19 @@ export const lightRedColor = "rgba(255, 0, 0, 0.6)";
 export const aliceBlueColor = "#64ffda";
 export const captionColor = "rgba(255, 255, 255, 0.7)";
 export const darkBlueColor = "#1a1a2e";
+
+// New colors for Batch.jsx component
+export const lightModeBackground =
+  "linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)";
+export const lightModeCardBackground = "rgba(255, 255, 255, 0.9)";
+export const lightModeTextPrimary = "#2c3e50";
+export const lightModeTextSecondary = "#7f8c8d";
+export const darkModeBackground =
+  "linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%)";
+export const darkModeCardBackground = "rgba(255, 255, 255, 0.1)";
+export const studentChatBackground = "rgba(100, 255, 218, 0.1)";
+export const aiChatBackground = "rgba(255, 255, 255, 0.05)";
+export const codeBlockBackground = "rgba(0, 0, 0, 0.8)";
+export const successColor = "#4caf50";
+export const warningColor = "#ff9800";
+export const errorColor = "#f44336";
