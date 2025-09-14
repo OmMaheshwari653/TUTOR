@@ -33,7 +33,7 @@ const NotesSection = memo(
     const progressValue = parseProgress(batchData.progress);
 
     return (
-      <Box sx={{ p: { xs: 2, md: 3 } }}>
+      <Box>
         {/* Chapter Introduction */}
         <Card
           sx={{

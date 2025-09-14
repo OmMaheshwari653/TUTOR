@@ -139,9 +139,20 @@ const Batch = () => {
 
   // Tab panel component for mobile
   const TabPanel = ({ children, value, index }) => (
-    <div hidden={value !== index}>
-      {value === index && <Box sx={{ py: 3 }}>{children}</Box>}
-    </div>
+    <Box
+      role="tabpanel"
+      hidden={value !== index}
+      sx={{
+        height:
+          value === index
+            ? { xs: "calc(100vh - 200px)", md: "calc(100vh - 250px)" }
+            : 0,
+        overflow: value === index ? "visible" : "hidden",
+        display: value === index ? "block" : "none",
+      }}
+    >
+      {value === index && children}
+    </Box>
   );
 
   return (
@@ -195,17 +206,21 @@ const Batch = () => {
             </Box>
 
             <TabPanel value={activeTab} index={0}>
-              <NotesSection
-                batchData={batchData}
-                batchNotes={batchNotes}
-                isDarkMode={isDarkMode}
-                isMobile={isMobile}
-                themeStyles={themeStyles}
-                expandedSection={expandedSection}
-                onToggleExpand={handleSectionExpand}
-                onExplainSection={handleExplainSection}
-                onAskDoubt={handleAskDoubt}
-              />
+              <Box
+                sx={{ height: "100%", overflowY: "auto", p: { xs: 1, md: 2 } }}
+              >
+                <NotesSection
+                  batchData={batchData}
+                  batchNotes={batchNotes}
+                  isDarkMode={isDarkMode}
+                  isMobile={isMobile}
+                  themeStyles={themeStyles}
+                  expandedSection={expandedSection}
+                  onToggleExpand={handleSectionExpand}
+                  onExplainSection={handleExplainSection}
+                  onAskDoubt={handleAskDoubt}
+                />
+              </Box>
             </TabPanel>
 
             <TabPanel value={activeTab} index={1}>
@@ -250,8 +265,10 @@ const Batch = () => {
                     ...themeStyles.contentCard,
                     position: "sticky",
                     top: "100px",
-                    maxHeight: "calc(100vh - 120px)",
+                    height: "calc(100vh - 120px)",
                     overflow: "hidden",
+                    display: "flex",
+                    flexDirection: "column",
                   }}
                 >
                   <ChatSection
@@ -260,7 +277,7 @@ const Batch = () => {
                     setNewMessage={setNewMessage}
                     onSendMessage={sendMessage}
                     isDarkMode={isDarkMode}
-                    isMobile={isMobile}
+                    isMobile={false}
                     themeStyles={themeStyles}
                   />
                 </Paper>
